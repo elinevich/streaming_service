@@ -67,67 +67,74 @@ This page provides two media solutions to cost-effectively deliver video on-dema
 
 1. Using AWS as a cloud provider
 
-$+$ cost-effective solution, because you pay only for the compute power, storage, and other resources you use. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ cost-effective solution, because you pay only for the compute power, storage, and other resources you use. 
 
-$+$ allows to configure services using less code.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ allows to configure services using less code.
 
-$+$ allows monitor the performance of resources and scale them under certain conditions.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ allows monitor the performance of resources and scale them under certain conditions.
 
-$+$ an ability to host resources around the world in different availability zones.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ an ability to host resources around the world in different availability zones.
 
-$-$ can be expensive, if developers do not have knowledge about AWS or if you use hign-cost instances.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ can be expensive, if developers do not have knowledge about AWS or if you use hign-cost instances.
 
-$-$to have specialized knowledge to use.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ to have specialized knowledge to use.
 
 2. Using S3 storage instaed of DB
 
-$+$ no schema.
-$+$ no need to have specialized knowledge to use.
-$+$ the pricing of S3 is cheaper compared to RDS.
-$+$ good for storing video content.
-$+$ good integration with other services.
-$+$ supports versioning.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ no schema.
 
-$-$ no transactions.
-$-$ no search. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ no need to have specialized knowledge to use.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ the pricing of S3 is cheaper compared to RDS.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ good for storing video content.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ good integration with other services.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$+$ supports versioning.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$-$ no transactions.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$-$ no search. 
 > search will require an additional solution. for example store video titles in ElasticSearch
 $-$ no updates
 > can not update a file, just replace it.
 
 3. Using CloudFront
 
-$+$ cache content in edge locations and decrease the workload, thus resulting in high availability of applications.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ cache content in edge locations and decrease the workload, thus resulting in high availability of applications.
 
-$+$ simple to use and ensures productivity enhancement.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ simple to use and ensures productivity enhancement.
 
-$+$ provides high security with the ‘Content Privacy’ feature.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ provides high security with the ‘Content Privacy’ feature.
 
-$+$ facilitates GEO targeting service for content delivery to specific end-users.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ facilitates GEO targeting service for content delivery to specific end-users.
 
-$+$ uses HTTP or HTTPS protocols for quick delivery of content.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ uses HTTP or HTTPS protocols for quick delivery of content.
 
-$+$ less expensive than using S3 directly, as it only charges for the data transfer.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ less expensive than using S3 directly, as it only charges for the data transfer.
 
-$-$ no disadvantages found.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ no disadvantages found.
 
 4. Using Lambda as a serverless solution
 
-$+$ no servers to manage
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ no servers to manage
 
 >Lambda runs code on highly available, fault-tolerant infrastructure spread across multiple Availability Zones (AZs) in a single Region, seamlessly deploying code, and providing all the administration, maintenance, and patches of the infrastructure. Lambda also provides built-in logging and monitoring, including integration with Amazon CloudWatch, CloudWatch Logs, and AWS CloudTrail.
 
-$+$ minimized cost
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ minimized cost
 
 >Pay only for exactly what you use, you minimize operating cost. None of the price you pay at the end of the month goes towards any unused minutes of server time, as your cost is solely a function of the time your application used.
-$+$ automatic scalability
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ automatic scalability
 
 >an application scales automatically. 
 
-$+$ integration
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ integration
 
 >can set up REST API, notifications, triggers, queue, using Lambda with others services.
 
-$-$ Has a limits:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ Has a limits:
 - function memory allocation - 128 MB to 10,240 MB, in 1-MB increments.
 
 - function timeout - 900 seconds (15 minutes).
@@ -146,28 +153,28 @@ $-$ Has a limits:
 
 5. Using Elastic Beanstalk as part a server solution
 
-$+$ fast and simple to deploy.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ fast and simple to deploy.
 
 > automatically handles the deployment details of capacity provisioning, auto-scaling, load balancing, and application health monitoring. Within minutes, an application will be ready to use without any infrastructure or resource configuration work on your part.
 
-$+$ scalable
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ scalable
 
 > It automatically scales an application up and down based on application’s need using easily adjustable Auto Scaling settings.
-$+$ developer productivity
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ developer productivity
 
 > focus on writing code rather than spending time managing and configuring servers, load balancers, databases, firewalls, and networks.
-$+$ complete infrastructure control
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ complete infrastructure control
 
 > If you decide you want to take over some (or all) of the elements of your infrastructure, you can do so seamlessly.
 
 + the ability to select a policy to update (rolling, rolling with batch, immutable, traffic splitting deployments).
 
-$-$ can be expensive, if using an immutable deployment policy, for example.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ can be expensive, if using an immutable deployment policy, for example.
 
 
 6. Using AWS Cognito as solution for users sign-in/sign-up
 
-$+$ cost-effective 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ cost-effective 
 
 > It has a free tier of 50,000 MAUs for users who sign in directly to Cognito User Pools and 50 MAUs for users federated through SAML 2.0 based identity providers.
 
@@ -175,19 +182,19 @@ $+$ cost-effective
 
 > allows set up multi-factor authentication (MFA) with each account, uses SSL/TLS to communicate with AWS resources.
 
-$+$ supports login with social identity providers and SAML or OIDC-based identity providers.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ supports login with social identity providers and SAML or OIDC-based identity providers.
 
-$+$ supports various compliance standards, operates on open identity standards (OAuth2.0, SAML 2.0 and OpenID Connect).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ supports various compliance standards, operates on open identity standards (OAuth2.0, SAML 2.0 and OpenID Connect).
 
-$-$ no disadvantages found, because this service is a really flexible and allows to write less code.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ no disadvantages found, because this service is a really flexible and allows to write less code.
 
 ![authorization](/assets/auth.jpg)
 
 7. Using AWS Codebuild, Codedeploy, Codepipeline, Elastic Beanstalk for deploy code, CI/CD process
 
-$+$ CodePipeline allows to launch CI/CD proccess automatically after merge code into master branch into GIT.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ CodePipeline allows to launch CI/CD proccess automatically after merge code into master branch into GIT.
 
-$+$ integration with Elastic Beanstalk
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ integration with Elastic Beanstalk
 
 $-$ 
 $-$ 
