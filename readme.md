@@ -68,11 +68,15 @@ This page provides two media solutions to cost-effectively deliver video on-dema
 1. Using AWS as a cloud provider
 
 $+$ cost-effective solution, because you pay only for the compute power, storage, and other resources you use. 
+
 $+$ allows to configure services using less code.
+
 $+$ allows monitor the performance of resources and scale them under certain conditions.
+
 $+$ an ability to host resources around the world in different availability zones.
 
 $-$ can be expensive, if developers do not have knowledge about AWS or if you use hign-cost instances.
+
 $-$to have specialized knowledge to use.
 
 2. Using S3 storage instaed of DB
