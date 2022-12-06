@@ -160,14 +160,17 @@ $-$ no updates
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ scalable
 
 > It automatically scales an application up and down based on application’s need using easily adjustable Auto Scaling settings.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ developer productivity
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  $+$ developer productivity
 
 > focus on writing code rather than spending time managing and configuring servers, load balancers, databases, firewalls, and networks.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ complete infrastructure control
 
 > If you decide you want to take over some (or all) of the elements of your infrastructure, you can do so seamlessly.
 
-+ the ability to select a policy to update (rolling, rolling with batch, immutable, traffic splitting deployments).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ the ability to select a policy to update (rolling, rolling with batch, immutable, traffic splitting deployments).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ can be expensive, if using an immutable deployment policy, for example.
 
