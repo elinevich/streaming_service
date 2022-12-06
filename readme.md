@@ -67,7 +67,7 @@ This page provides two media solutions to cost-effectively deliver video on-dema
 
 1. Using AWS as a cloud provider
 
-$+$cost-effective solution, because you pay only for the compute power, storage, and other resources you use. 
+$+$ cost-effective solution, because you pay only for the compute power, storage, and other resources you use. 
 $+$ allows to configure services using less code.
 $+$ allows monitor the performance of resources and scale them under certain conditions.
 $+$ an ability to host resources around the world in different availability zones.
@@ -103,14 +103,14 @@ $-$ no disadvantages found.
 
 4. Using Lambda as a serverless solution
 
-+ no servers to manage:
+$+$ no servers to manage:
 >Lambda runs code on highly available, fault-tolerant infrastructure spread across multiple Availability Zones (AZs) in a single Region, seamlessly deploying code, and providing all the administration, maintenance, and patches of the infrastructure. Lambda also provides built-in logging and monitoring, including integration with Amazon CloudWatch, CloudWatch Logs, and AWS CloudTrail.
 
-+ minimized cost
+$+$ minimized cost
 >Pay only for exactly what you use, you minimize operating cost. None of the price you pay at the end of the month goes towards any unused minutes of server time, as your cost is solely a function of the time your application used.
-+ automatic scalability
+$+$ automatic scalability
 >an application scales automatically. 
-+ integration
+$+$ integration
 >can set up REST API, notifications, triggers, queue, using Lambda with others services.
 
 $-$ Has a limits:
@@ -156,8 +156,8 @@ $-$ no disadvantages found, because this service is a really flexible and allows
 $+$ CodePipeline allows to launch CI/CD proccess automatically after merge code into master branch into GIT.
 $+$ integration with Elastic Beanstalk
 
-$-$
-$-$
+$-$ 
+$-$ 
 
 ![deploy scheme](/assets/deploy.jpg)
 
