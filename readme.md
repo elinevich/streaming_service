@@ -14,6 +14,8 @@
 ## Description
 This page provides two media solutions to cost-effectively deliver video on-demand and live-streaming content to global audiences using the AWS Cloud. The first one is based on serverless model and microservice architecture, the second - server model and monolith architecture.
 
+[All schemes and working proccess](https://miro.com/app/board/uXjVP9_EPIk=/?openComment=3458764540430567198&utm_medium=feed&utm_source=miro).
+
 ## Functional requirements
 
 - broadcast real-time video
