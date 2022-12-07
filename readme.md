@@ -198,10 +198,16 @@ $-$ no updates
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ CodePipeline allows to launch CI/CD proccess automatically after merge code into master branch into GIT.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ integration with Elastic Beanstalk
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ integration with Elastic Beanstalk and Jenkins, GITHub
 
-$-$ 
-$-$ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ secure
+>Within the AWS architecture. You do not have to expose keys to the outside world to be able to trigger builds.
+> Parameter Store integration for passing secrets
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$  streaming logs to Amazon CloudWatch
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ need to pay
 
 ![deploy scheme](/assets/deploy.jpg)
 
