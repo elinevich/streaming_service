@@ -18,6 +18,7 @@ This page provides two media solutions to cost-effectively deliver video on-dema
 
 - broadcast real-time video
 - provide video on-demand
+- searching by name
 - an ability to authorize and register users, using custom authorization and authorization with Google identity provider
 - encode and transcode video in real-time
 - segment videos and images and store the segments in Amazon S3
@@ -95,7 +96,7 @@ This page provides two media solutions to cost-effectively deliver video on-dema
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ no transactions.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ no search. 
-> search will require an additional solution. for example store video titles in ElasticSearch
+> search will require an additional solution. for example store video titles in ElasticSearch or S3 + AWS Athena
 
 $-$ no updates
 > can not update a file, just replace it.
@@ -210,6 +211,23 @@ $-$ no updates
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ need to pay
 
 ![deploy scheme](/assets/deploy.jpg)
+
+8. Using S3 and AWS Athena for searching
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$  Athena provides a simplified, flexible way to analyze petabytes of data from S3
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$  serverless
+>  the user can quickly query data without having to configure or manage any infrastructure. Additionally, the customer doesn’t have to worry about failures, software updates, or scaling the servers or data warehouses as the datasets and number of users grow.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$  pay per query
+> to pay only for the queries they run and the amount of data scanned per each query. So, users can significantly reduce their charges by partitioning, compressing, and converting their data into columnar formats. Besides, there are no additional storage charges since the queries are performed directly in S3.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ fast performance
+> this interactive query tool is designed for fast performance with S3. It can easily perform queries in parallel, allowing users to get results within seconds.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ need to pay
+
+![deploy scheme](/assets/search.jpg)
 
 ## Storage of configurations
 
