@@ -24,7 +24,7 @@ This page provides two media solutions to cost-effectively deliver video on-dema
 - provide RESTful APIs for CRUD management
 - support the access of large number of devices
 
-### Non-functional requirements
+## Non-functional requirements
 
 ### The serverless solution
 
@@ -38,7 +38,6 @@ This page provides two media solutions to cost-effectively deliver video on-dema
 
 ### The server based solution
 
-- real-time / on-demand streaming
 - low latency
 - high performance
 - high availability and global delivery
@@ -91,12 +90,13 @@ This page provides two media solutions to cost-effectively deliver video on-dema
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ good integration with other services.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$+$ supports versioning.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ supports versioning.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$-$ no transactions.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ no transactions.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$-$ no search. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ no search. 
 > search will require an additional solution. for example store video titles in ElasticSearch
+
 $-$ no updates
 > can not update a file, just replace it.
 
@@ -135,21 +135,22 @@ $-$ no updates
 >can set up REST API, notifications, triggers, queue, using Lambda with others services.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ Has a limits:
-- function memory allocation - 128 MB to 10,240 MB, in 1-MB increments.
 
-- function timeout - 900 seconds (15 minutes).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  - function memory allocation - 128 MB to 10,240 MB, in 1-MB increments.
 
-- function environment variables - 4 KB, for all environment variables associated with the function, in aggregate.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - function timeout - 900 seconds (15 minutes).
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - function environment variables - 4 KB, for all environment variables associated with the function, in aggregate.
 
 > But this is not a problem if you use the service suggested below
 
-- function burst concurrency - 500 - 3000 (varies per Region).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - function burst concurrency - 500 - 3000 (varies per Region).
 
-- invocation payload (request and response) - 6 MB each for request and response (synchronous) and 256 KB. (asynchronous).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - invocation payload (request and response) - 6 MB each for request and response (synchronous) and 256 KB. (asynchronous).
 
-- deployment package (.zip file archive) size - 50 MB (zipped, for direct upload) and 250 MB (unzipped).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - deployment package (.zip file archive) size - 50 MB (zipped, for direct upload) and 250 MB (unzipped).
 
-- container image code package size - 10 GB.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - container image code package size - 10 GB.
 
 5. Using Elastic Beanstalk as part a server solution
 
@@ -181,7 +182,7 @@ $-$ no updates
 
 > It has a free tier of 50,000 MAUs for users who sign in directly to Cognito User Pools and 50 MAUs for users federated through SAML 2.0 based identity providers.
 
-+ secure
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ secure
 
 > allows set up multi-factor authentication (MFA) with each account, uses SSL/TLS to communicate with AWS resources.
 
@@ -189,7 +190,7 @@ $-$ no updates
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $+$ supports various compliance standards, operates on open identity standards (OAuth2.0, SAML 2.0 and OpenID Connect).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ no disadvantages found, because this service is a really flexible and allows to write less code.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $-$ no disadvantages found, this service is a really flexible and allows to write less code.
 
 ![authorization](/assets/auth.jpg)
 
